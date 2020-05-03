@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment>personal info change by Faruq</comment>
+<entry key="Name">Faruq</entry>
+<entry key="State">VA</entry>
+<entry key="City">Alexandria</entry>
+<entry key="County">Fairfax</entry>
+<entry key="Country">US</entry>
+</properties>
