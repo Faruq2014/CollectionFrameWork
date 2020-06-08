@@ -35,8 +35,10 @@ public class HowToGetAndSetProperties {
 	public static void setProperties() {
 		try {
 			OutputStream output = new FileOutputStream(projectPath + "/src/Properties/config.properties");
-			prop.setProperty("Result", "Pass");
+			prop.setProperty("Result", "fail");
+			prop.setProperty("total", "fail");
 			prop.store(output, "Tester: Faruq");
+
 		} catch (Exception exp) {
 			System.out.println(exp.getMessage());
 			System.out.println(exp.getCause());
