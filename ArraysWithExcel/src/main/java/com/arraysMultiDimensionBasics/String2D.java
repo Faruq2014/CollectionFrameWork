@@ -4,7 +4,8 @@ public class String2D {
 
 	public static void main(String[] args) {
 
-        String[][] str = new String[][]{{"Faruq", "Libi"}, {"Fima", "Nisa"},{"Rafid","Rayan"}};
+        String[][] str = new String[][]
+        		{{"Faruq", "Libi"}, {"Fima", "Nisa"},{"Rafid","Rayan"}};
         System.out.println("Two dimensional string array elements are :\n");    
 	for (int i = 0; i < 3; i++) 
 	{

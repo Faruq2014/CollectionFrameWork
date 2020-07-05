@@ -17,6 +17,9 @@ public class DeclaringArrays {
 	String[][] anStringArray; // declaring an two dimensional array of Strings
 	//Data_Type[][] Array_Name = new int[Row_Size][Column_Size];
 	
+	
+	
+	
 	@Test(priority = 1)
 	public void intializing1() {
 		int[][] salary = new int[3][3];

@@ -3,11 +3,11 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.arraysHowToCreateExcellFile.DataFormat">
+      <class name="com.arraysMultiDimensionBasics.PrintingOnly_Row">
         <methods>
-          <include name="dataFormat"/>
+          <include name="printingRow3"/>
         </methods>
-      </class> <!-- com.arraysHowToCreateExcellFile.DataFormat -->
+      </class> <!-- com.arraysMultiDimensionBasics.PrintingOnly_Row -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

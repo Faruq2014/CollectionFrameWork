@@ -1,4 +1,4 @@
-package com.arraysMultiDimensionBasics;
+package com.arraysMultiDimensiongamming;
 
 import java.util.Scanner;
 
