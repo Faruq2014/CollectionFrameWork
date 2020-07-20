@@ -74,7 +74,7 @@ public class HowToCreateRange {
       		dcell.setCellValue("WELCOME");
       		
       		
-           FileOutputStream output = new FileOutputStream("MultipoleSheet.xlsx");
+           FileOutputStream output = new FileOutputStream("Range.xlsx");
            workbook.write(output);
            output.close();
            workbook.close();

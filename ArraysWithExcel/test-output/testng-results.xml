@@ -1,25 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="69" started-at="2020-07-05T00:46:27Z" finished-at="2020-07-05T00:46:27Z">
+  <suite name="Default suite" duration-ms="128" started-at="2020-07-19T23:49:11Z" finished-at="2020-07-19T23:49:12Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="69" started-at="2020-07-05T00:46:27Z" finished-at="2020-07-05T00:46:27Z">
-      <class name="com.arraysMultiDimensionSalary.Salary_Bonus">
-        <test-method status="PASS" signature="salary()[pri:1, instance:com.arraysMultiDimensionSalary.Salary_Bonus@26653222]" name="salary" duration-ms="12" started-at="2020-07-05T00:46:27Z" finished-at="2020-07-05T00:46:27Z">
+    <test name="Default test" duration-ms="128" started-at="2020-07-19T23:49:11Z" finished-at="2020-07-19T23:49:12Z">
+      <class name="com.arraysHowToReadFile.ReadAnyFile">
+        <test-method status="PASS" signature="test1()[pri:0, instance:com.arraysHowToReadFile.ReadAnyFile@26653222]" name="test1" duration-ms="51" started-at="2020-07-19T23:49:12Z" finished-at="2020-07-19T23:49:12Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- salary -->
-        <test-method status="PASS" signature="bonus()[pri:2, instance:com.arraysMultiDimensionSalary.Salary_Bonus@26653222]" name="bonus" duration-ms="7" started-at="2020-07-05T00:46:27Z" finished-at="2020-07-05T00:46:27Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- bonus -->
-        <test-method status="PASS" signature="yearlyEmployeesalary()[pri:3, instance:com.arraysMultiDimensionSalary.Salary_Bonus@26653222]" name="yearlyEmployeesalary" duration-ms="3" started-at="2020-07-05T00:46:27Z" finished-at="2020-07-05T00:46:27Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- yearlyEmployeesalary -->
-      </class> <!-- com.arraysMultiDimensionSalary.Salary_Bonus -->
+        </test-method> <!-- test1 -->
+      </class> <!-- com.arraysHowToReadFile.ReadAnyFile -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

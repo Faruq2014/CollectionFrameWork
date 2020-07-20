@@ -42,7 +42,12 @@ public class DeclaringArrays {
 	
 	@Test(priority = 2)
 	public void intializing2() {
-		int[][] StudentArray = { {12, 22, 33},{45, 65, 95},{442, 444, 446},{785, 786, 787}};
+		
+		
+		int[][] StudentArray = { {12, 22, 33},
+								 {45, 65, 95},
+								 {442, 444, 446},
+								 {785, 786, 787}   };
 
 		System.out.println("Element at StudentArray[0][0] = " + StudentArray[0][0]);
 		System.out.println("Element at StudentArray[0][1] = " + StudentArray[0][1]);
@@ -78,7 +83,8 @@ public class DeclaringArrays {
 	
 	@Test(priority = 4)
 	public   void intialize4() {
-		String[][] salutation = { {"Mr. ", "Mrs. ", "Ms. "}, {"Molla"} }; 
+		String[][] salutation = { {"Mr. ", "Mrs. ", "Ms. "},
+				                  {"Molla"} }; 
 		// Mr. Molla 
 		System.out.println(salutation[0][0] + salutation[1][0]);
 		// Mrs. Molla 

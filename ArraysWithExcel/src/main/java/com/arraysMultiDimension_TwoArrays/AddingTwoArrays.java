@@ -5,8 +5,8 @@
 	public class AddingTwoArrays {
 	
 	
-		@Test
-		public void adding() {
+		@Test(priority =1 )
+		public void addingTwoArrays() {
 				int[][] a = { 
 						      {5, 5, 5},
 						      {5, 5, 5}    };
@@ -28,7 +28,7 @@
 			}
 		}
 	
-		@Test
+		@Test(priority = 2)
 		public void addingString() {
 			String[][] a = { {"Faruq", "Fabiha", "Faiza"},
 					{"Zakir", "Rafid", "Rayan"} };
@@ -47,7 +47,8 @@
 				System.out.println();
 			}
 		}
-	@Test
+		
+	@Test(priority = 3)
 	public void addInt_String() {
 		String[][] a = { {"Faruq", "Fabiha", "Faiza"},
 				         {"Zakir",  "Rafid", "Rayan"}     };
@@ -67,4 +68,5 @@
 			System.out.println();
 		}
 	}
+	
 	}

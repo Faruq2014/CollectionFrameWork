@@ -1,13 +1,28 @@
 package com.arraysSingleDimensionBasics;
 
 public class PassingArray {
+	
+	
+	
+	
+	
 	public static void main(String args[]){ 
+		
 		printArray(new int[]{10,22,44,66});//passing anonymous array to method  
 		
 		
-		int a[]={33,1,4,5};//declaring and initializing an array  
+		int a[]={33,1,4,5};//declaring and initializing an array 
+		
 		way_of_passing_an_array(a);//passing array to method  
+		
+		String[]  name={"khaled", "Kamal", "kasem"};
+		
+		name(name);
+		
+		
+		name(new String[]{"kamal",""," "});
 		}
+	
 
 	//Java Program to demonstrate the way of passing an anonymous array  
 		//to method.  
@@ -33,6 +48,17 @@ public class PassingArray {
 		
 			System.out.println(max+" is the max value of the array ");
 	}
+	
+	
+	public static void name(String name []) {
+		
+		
+		System.out.println(name);
+	}
+	
+	
+	
+	
 	
 	
 	

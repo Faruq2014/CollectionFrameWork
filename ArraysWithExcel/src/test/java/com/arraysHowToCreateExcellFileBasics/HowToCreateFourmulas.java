@@ -59,7 +59,7 @@ public class HowToCreateFourmulas {
            // you must put range of cell, such as A1 and A4. 
            // this formula take numeric value and any data type, .
            // other data count as 0.
-           FileOutputStream output = new FileOutputStream("MultipoleSheet.xlsx");
+           FileOutputStream output = new FileOutputStream("Formula.xlsx");
            workbook.write(output);
            output.close();
            workbook.close();

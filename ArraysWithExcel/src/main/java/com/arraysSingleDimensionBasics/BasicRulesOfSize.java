@@ -12,12 +12,15 @@ public class BasicRulesOfSize {
 	@Test
 	public void fixedSized() {
 		//java arrays are fixed in size. you must declare the size.
-		
+	
 		int salary[]= new int[2]; //declaration, instantiation.
+		
 		salary[0]=4000; //initialization   of arrays
 		salary[1]=5000;
+		
 		System.out.println(salary[0]);
 		System.out.println(salary[1]);
+	
 		
 		int wage[]={1000,2000};//declaration, instantiation and initialization 
 		System.out.println(wage[0]);

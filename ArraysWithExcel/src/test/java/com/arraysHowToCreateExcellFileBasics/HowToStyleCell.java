@@ -24,30 +24,42 @@ public class HowToStyleCell {
             Cell cell3=sheet.createRow(2).createCell(0);
             Cell cell4=sheet.createRow(3).createCell(0);
             Cell cell5=sheet.createRow(4).createCell(0);
+         
+            
            System.out.println("Back Ground");
            cell1.setCellValue("WELCOME");
            cell2.setCellValue("THANK YOU");
            
          CellStyle  styleBackground=workbook.createCellStyle(); // create style variable
+         
          styleBackground.setFillForegroundColor(IndexedColors.BROWN.getIndex());
           styleBackground.setFillPattern(FillPatternType.SOLID_FOREGROUND);
          // back ground style is ready to assign to any variable
+          
           cell1.setCellStyle(styleBackground);
           cell2.setCellStyle(styleBackground);
+          
           // there are lots of back ground stuff you can do.
            System.out.println("Alhamdulillah Back Ground done");
            
            System.out.println("Working on Font");
            cell3.setCellValue("MY PLEASURE");
+           
            Font font= workbook.createFont();
+           
+           
            CellStyle  styleFont=workbook.createCellStyle();
+           
            font.setColor(IndexedColors.BLUE.getIndex());
            font.setItalic(true);
            font.setBold(true);
            font.setFontHeightInPoints((short)15);
            font.setUnderline(font.U_DOUBLE);
            font.setFontName("Algerian" );
+           
+           
            styleFont.setFont(font); // set font to style variable
+           
            cell3.setCellStyle(styleFont); // assign style variable to a cell
            System.out.println("you can do a lot more on Font");
         
@@ -108,11 +120,11 @@ public class HowToStyleCell {
            
             
            
-           FileOutputStream output = new FileOutputStream("MultipoleSheet.xlsx");
+           FileOutputStream output = new FileOutputStream("StyleSheet.xlsx");
            workbook.write(output);
            output.close();
            workbook.close();
-           System.out.println("Alhamdulillah second formula done");
+           System.out.println("Alhamdulillah  done");
 	}
 
 }

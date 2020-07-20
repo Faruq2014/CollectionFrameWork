@@ -17,7 +17,7 @@ public class HowToReadTextFile {
 			System.out.println(scan.nextLine());
 
 		}
-
+		scan.close();
 	}
 
 }

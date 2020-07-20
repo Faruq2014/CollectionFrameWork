@@ -13,9 +13,12 @@ import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
+import com.arraysHowToReadExcelFile.ExcelUtilsWithReturn;
+
 public class ContactList {
 
 	private static String[]	columns= {"firstName", "lastName", "emai", "dateOfBirthString"};
+	
 	private static List<Contact>contacts= new ArrayList<Contact>();
 	
 	public static void main(String[] args) throws IOException {
@@ -66,10 +69,25 @@ public class ContactList {
 		workbook.close();
 		System.out.println("created MashAllah");
 		
+		ExcelUtilsWithReturn ex= new ExcelUtilsWithReturn("contact.xlsx","contacts");
+		System.out.println(ex.getRowCount());
+		System.out.println(ex.getColCount());
+		System.out.println(ex.getStringCellData(1, 3));
+		System.out.println(ex.getNumericCellData(1, 3));
+		
+		ex.itreator();
+		
+		
 	}
 	
 
 }
+
+
+
+
+
+
 
 class Contact{
 	public String firstName, lastName, emai, dateOfBirthString;

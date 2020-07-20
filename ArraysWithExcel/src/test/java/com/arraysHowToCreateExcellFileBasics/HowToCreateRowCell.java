@@ -12,6 +12,7 @@ public class HowToCreateRowCell {
 
 	public static void main(String[] args) {
 		XSSFWorkbook workbook= new XSSFWorkbook();
+		
 		XSSFSheet sheet=workbook.createSheet(); // working on default sheet0.
 		XSSFRow row=sheet.createRow(0);    // create row
 		XSSFCell cell=row.createCell(0); 	// create cell
@@ -34,7 +35,7 @@ public class HowToCreateRowCell {
 		
 		
 		 try {
-				FileOutputStream output = new FileOutputStream("MultipoleSheet.xlsx");
+				FileOutputStream output = new FileOutputStream("CreateRow_Cell.xlsx");
 			workbook.write(output);
 			output.close();
 			System.out.println("Alhamdulillah created ");

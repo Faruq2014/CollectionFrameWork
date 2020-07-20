@@ -6,11 +6,18 @@ import java.io.IOException;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.CellStyle;
 import org.apache.poi.ss.usermodel.HorizontalAlignment;
+import org.apache.poi.ss.usermodel.IndexedColors;
 import org.apache.poi.ss.usermodel.VerticalAlignment;
+import org.apache.poi.xssf.usermodel.XSSFFont;
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.testng.annotations.Test;
+
+import com.arraysHowToReadExcelFile.NestedLoop;
+import com.arraysHowToReadExcel_Data.Data_Return;
+import com.arraysHowToReadExcel_Data.NestedLoop_Data;
+import com.arraysHowTo_Search_ExcelFile.Search;
 
 public class StudentsFile {
 /*
@@ -71,6 +78,13 @@ public class StudentsFile {
 		style.setAlignment(HorizontalAlignment.CENTER);
 		style.setVerticalAlignment(VerticalAlignment.CENTER);
 		
+		XSSFFont headerFont	=workbook.createFont();
+		headerFont.setBold(true);
+		headerFont.setFontHeightInPoints((short)15);
+		headerFont.setColor(IndexedColors.RED.getIndex());
+		style.setFont(headerFont);
+		
+		
 		// create a spread sheet
 		XSSFSheet sheet= workbook.createSheet("Results");
 		//create row
@@ -99,7 +113,7 @@ public class StudentsFile {
 		row=sheet.createRow(i+1);
 		for (int j = 0; j <4; j++) {
 			Cell cell=	row.createCell(j);
-			cell.setCellStyle(style); // setting style for all the cell
+			//cell.setCellStyle(style); // setting style for all the cell
 			if (cell.getColumnIndex()==0) {
 				cell.setCellValue(roll[i]);
 			}
@@ -127,12 +141,43 @@ public class StudentsFile {
 			FileOutputStream out= new FileOutputStream("Result.xlsx");
 			workbook.write(out);
 			out.close();
-			System.out.println("Alhamdullillah created the excell file");
+			System.out.println("Alhamdullillah created the Result file");
 		} catch (IOException e1) {
 			
 			e1.printStackTrace();
 		}
 	
 		
+	}
+	@Test
+	public void readData() throws Exception {
+		/*
+		NestedLoop nl = new NestedLoop("Result.xlsx","Results");
+		nl.getData();
+		nl.getData1();
+		//nl.getDataRow(0);
+		//nl.getDataRow(1);
+		nl.getDatacolumn(0);
+	*/
+		
+		Data_Return dr=new Data_Return("Result.xlsx");
+		System.out.println(dr.getCellData("Results", 1, 0));
+		System.out.println(dr.getCellData("Results", 1, 1));
+		System.out.println(dr.getCellData("Results", 1, 2));
+		System.out.println(dr.getCellData("Results", 1, 3));
+		
+		System.out.println("<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>");
+		
+		System.out.println(dr.getCellData1("Results", "name", 1));
+		System.out.println(dr.getCellData1("Results", "name", 2));
+		System.out.println(dr.getCellData1("Results", "name", 3));
+		System.out.println(dr.getCellData1("Results", "name", 4));
+		
+		System.out.println("<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>");
+		
+		Search search= new Search("Result.xlsx","Results");
+		search.getDatacolumn("Faruq");
+		
+	
 	}
 }

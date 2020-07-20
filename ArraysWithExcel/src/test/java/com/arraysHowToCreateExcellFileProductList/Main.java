@@ -2,6 +2,7 @@ package com.arraysHowToCreateExcellFileProductList;
 
 import java.io.FileOutputStream;
 import org.apache.poi.hssf.usermodel.HSSFFont;
+import org.apache.poi.sl.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.CellStyle;
 import org.apache.poi.ss.usermodel.HorizontalAlignment;
@@ -11,11 +12,18 @@ import org.apache.poi.ss.usermodel.VerticalAlignment;
 import org.apache.poi.ss.util.CellRangeAddress;
 import org.apache.poi.xssf.usermodel.XSSFDataFormat;
 import org.apache.poi.xssf.usermodel.XSSFFont;
+import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
-public class Main {
+import com.arraysHowToReadExcelFile.ExcelUtilsWithReturn;
+import com.arraysHowToReadExcelFile.NestedLoop;
+import com.arraysHowToReadExcelFile.NestedLoop2;
+import com.arraysHowToReadExcelFile.UtilLoop;
+import com.arraysHowTo_Search_ExcelFile.Search;
 
+public class Main {
+	
 	public static void main(String[] args) {
 	try {
 		ProductModel pModel = new ProductModel();
@@ -138,7 +146,35 @@ public class Main {
 	} catch (Exception e) {
 		System.out.println(e.getMessage());
 	}
-
+	
+	
+	
+//read the data
+	ExcelUtilsWithReturn read = new ExcelUtilsWithReturn("Product.xlsx","List Product");
+	System.out.println(read.getRowCount());
+	System.out.println(read.getColCount());
+	//System.out.println(read.getStringCellData(0, 0));
+	//read.itreator();
+	
+	System.out.println();
+	/*
+	NestedLoop np = new NestedLoop("Product.xlsx","List Product");
+	np.getData1();
+	System.out.println();
+	np.getDataRow(2);
+	np.getDatacolumn(1);
+	*/
+	/*
+	NestedLoop2 np2= new NestedLoop2("Product.xlsx","List Product");
+	np2.getData();
+	np2.getDataRow();
+	np2.getDatacolumn();
+	*/
+	Search search=new Search("Product.xlsx","List Product");
+	search.getDatacolumn1("Name");
+	System.out.println();
+	//UtilLoop ul = new UtilLoop();
+	//ul.getData("Product.xlsx","List Product");
 	}
 
 }

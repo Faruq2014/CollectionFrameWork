@@ -13,13 +13,14 @@
 			
 			
 			int i;
-		
+		    int j;
 			
 			public PrintingOnly_Row() {
-				for ( int i = 0; i < num.length; i++) {
+				for ( i = 0; i < num.length; i++) {
 					System.out.println("_________________");
-					for (int  j = 0; j < num[0].length; j++) {
+					for (  j = 0; j < num[0].length; j++) {
 						System.out.println("Number["+i+"]["+j+"]:"+num[i][j]);	
+						//System.out.println(num[i][j]);
 					}
 				}
 			}
@@ -33,15 +34,15 @@
 					System.out.print(num[0][i]+" ");
 				}	
 		
-				System.out.println();
+				System.out.println("row 1");
 			}
 			@Test(priority = 2)
 			public void printingRow1() {
-				for (i = 0; i < num[0].length; i++) {
+				for (i = 0; i < num[1].length; i++) {
 					System.out.print(num[1][i]+" ");
 				}	
 		
-				System.out.println();
+				System.out.println("row 2");
 			}
 		
 			@Test(priority = 3)
@@ -50,7 +51,7 @@
 					System.out.print(num[2][i]+" ");
 				}	
 		
-				System.out.println();
+				System.out.println("row3");
 			}
 		
 		
